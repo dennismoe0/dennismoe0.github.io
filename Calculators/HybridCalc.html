@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<script type="text/javascript">
+        var followCursor = (function() {
+          var s = document.createElement('div');
+          s.style.position = 'absolute';
+          s.style.margin = '0';
+          s.style.padding = '0';
+          s.style.width = '100px';
+          s.style.height = '100px';
+          s.style.backgroundImage = "url(../Simonimg/paprika.png)";
+
+          return {
+            init: function() {
+              document.body.appendChild(s);
+            },
+
+            run: function(e) {
+              var e = e || window.event;
+              s.style.left  = (e.clientX - 50) + 'px';
+              s.style.top = (e.clientY - 50) + 'px';
+            }
+          };
+        }());
+
+        window.onload = function() {
+          followCursor.init();
+          document.bo
+DivineChili: dy.onmousemove = followCursor.run;
+        }
+
+        </script>
+
+		<style type="text/css">
+
+			table,td,tr
+			{
+				margin-right: auto;
+				margin-left: auto;
+				margin-top: auto;
+				margin-bottom: auto
+			}
+
+		</style>
+
+		<title>Kalkulator</title>
+
+		<script type="text/javascript">
+		
+			var a,b,result;
+			function setValues()
+			{
+				a = Number(document.getElementById("a").value)
+				b = Number(document.getElementById("b").value)
+			}
+			function sum()
+			{
+				setValues();
+				result = a+b;
+				alert("Summen er "+result)
+			}
+			function rest()
+			{
+				setValues();
+				result = a-b;
+				alert("Differansen er "+result)
+			}
+			function mult()
+			{
+				setValues();
+				result = a*b;
+				alert("Produktet er "+result)
+			}
+			function div()
+			{
+				setValues();
+				result = a/b;
+				alert("Kvotienten er "+result)
+			}
+			function doMath(){
+				var inputNum1=document.form1.input1.value;
+				var result = Math.sqrt(inputNum1);
+				
+				alert("Kvadratroten er "+result)
+			}
+		</script>
+	</head>
+	<body>
+	<table border="1" cellspacing="20" bgcolor="#ffffcc" cellpadding="20">
+		<div>
+		<tr>
+		<th>
+			<input id="a" type="text"/>
+
+			<input type="button" onclick="sum()" value="+"/>
+			<input type="button" onclick="rest()" value="-"/>
+			<input type="button" onclick="mult()" value="*"/>
+			<input type="button" onclick="div()" value="/"/>
+
+			<input id="b" type="text"/>
+		</th>
+		</tr>
+		<tr>
+			<th>
+				<form name=form1>
+					Kvadratrotskalkulator:
+					<br>
+					Skriv tallet her:
+					<input type="text" name="input1" size="10">
+					<input type="button" value="Kalkuler" onclick='doMath()'>
+				</form>
+			</th>
+			</tr>
+		</div>
+	</table>
+</body>
+</html>
