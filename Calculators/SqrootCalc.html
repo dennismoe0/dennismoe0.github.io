@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SqRt Calc</title>
+
+		<script type="text/javascript">
+			function doMath(){
+				var inputNum1=document.form1.input1.value;
+				var result = Math.sqrt(inputNum1);
+				document.form1.answer.value = result;
+			}
+		</script>
+	</head>
+	<body>
+		
+		<center><form name=form1>
+			Skriv tallet her:
+				<input type="text" name="input1" size="10">
+				<input type="button" value="Kalkuler" onclick='doMath()'>
+				<br>
+			Kvadratroten av tallet er:
+			<input type="text" name="answer" size="20">
+		</form></center>
+	</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kalkulator</title>
+
+	<script type="text/javascript">
+		
+		var a,b,result;
+		function setValues()
+		{
+			a = Number(document.getElementById("a").value)
+			b = Number(document.getElementById("b").value)
+		}
+		function sum()
+		{
+			setValues();
+			result = a+b;
+			alert("Summen er "+result)
+		}
+		function rest()
+		{
+			setValues();
+			result = a-b;
+			alert("Differansen er "+result)
+		}
+		function mult()
+		{
+			setValues();
+			result = a*b;
+			alert("Produktet er "+result)
+		}
+		function div()
+		{
+			setValues();
+			result = a/b;
+			alert("Kvotienten er "+result)
+		}
+	</script>
+</head>
+<body>
+<center><div>
+	<input id="a" type="text"/>
+	<input id="b" type="text"/>
+	<input type="button" onclick="sum()" value="+"/>
+	<input type="button" onclick="rest()" value="-"/>
+	<input type="button" onclick="mult()" value="*"/>
+	<input type="button" onclick="div()" value="/"/>
+</div></center>
+
+
+</body>
+</html>

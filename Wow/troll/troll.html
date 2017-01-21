@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>This didnt lead anywhere</title>
+
+		<style type="text/css">
+		
+		body {
+			background-image: url("https://wallpaperscraft.com/image/troll_face_smile_90746_2048x1152.jpg");
+		}
+		img.fs {
+			padding: 0px;
+			margin: 0px;
+			border:none;
+		}
+		div {
+			margin-top: 250px;
+		}
+		h1 {
+			font-family: "Comic Sans MS"
+		}
+		a {
+			text-decoration: underline;
+			font-weight: bold;
+			color: blue;
+			font-size: 100px;
+		}
+		</style>
+	</head>
+	<body>
+
+		<script type="text/javascript">
+			         var followCursor = (function() {
+			           var s = document.createElement('div');
+			           s.style.position = 'absolute';
+			           s.style.margin = '0';
+			           s.style.padding = '0';
+			           s.style.width = '400px';
+			           s.style.height = '400px';
+			           s.style.backgroundImage = "url()";
+			           s.style.transform = 'scale(0.2,0.2)';
+
+			           return {
+			             init: function() {
+			               document.body.appendChild(s);
+			             },
+
+			             run: function(e) {
+			               var e = e || window.event;
+			               s.style.left  = (e.clientX - 182) + 'px';
+			               s.style.top = (e.clientY - 200) + 'px';
+
+			             }
+			           };
+			         }());
+
+			         window.onload = function() {
+			           followCursor.init();
+			           document.body.onmousemove = followCursor.run;
+			         }
+		</script>
+
+
+	<center><div>
+		
+		<h1><a href=""><b>Back Home</b></a></h1>
+		
+	</div></center>
+
+	</body>
+</html>
